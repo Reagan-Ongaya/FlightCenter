@@ -920,3 +920,83 @@ Processing by PagesController#index as HTML
 Completed 200 OK in 7ms (Views: 5.0ms | Allocations: 1495)
 
 
+Started GET "/" for ::1 at 2023-04-06 09:04:41 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 308)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+Hash: bab95a58e19db76dc77c
+Version: webpack 4.46.0
+Time: 78ms
+Built at: 04/06/2023 9:04:44 AM
+        Asset      Size  Chunks             Chunk Names
+manifest.json  23 bytes          [emitted]  
+
+ERROR in Entry module not found: Error: Can't resolve './app/javascript/packs/application.js' in '/home/moringa/Projects/FlightCenter'
+
+
+warning package.json: No license field
+
+[1m[31mInsufficient number of arguments or no entry found.
+[1m[31mAlternatively, run 'webpack(-cli) --help' for usage info.[39m[22m
+
+
+  Rendered layout layouts/application.html.erb (Duration: 2799.3ms | Allocations: 296093)
+Completed 500 Internal Server Error in 2828ms (ActiveRecord: 0.0ms | Allocations: 301006)
+
+
+  
+ActionView::Template::Error (Webpacker can't find index.js in /home/moringa/Projects/FlightCenter/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+  "entrypoints": {
+  }
+}
+):
+     6:     <%= csrf_meta_tags %>
+     7:     <%= csp_meta_tag %>
+     8:     <%= javascript_include_tag 'application' %>
+     9:     <%= javascript_pack_tag 'index' %>
+    10: 
+    11:     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    12:    
+  
+app/views/layouts/application.html.erb:9
+Started GET "/" for ::1 at 2023-04-06 09:05:08 +0300
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 107)
+  Rendered layout layouts/application.html.erb (Duration: 40.7ms | Allocations: 6320)
+Completed 500 Internal Server Error in 47ms (ActiveRecord: 0.0ms | Allocations: 7239)
+
+
+  
+ActionView::Template::Error (undefined method `javascript' for #<ActionView::Base:0x0000000000cbe8>
+Did you mean?  javascript_url):
+     6:     <%= csrf_meta_tags %>
+     7:     <%= csp_meta_tag %>
+     8:     <%= javascript_include_tag 'application' %>
+     9:     <%= javascript 'index' %>
+    10: 
+    11:     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    12:    
+  
+app/views/layouts/application.html.erb:9
+Started GET "/" for ::1 at 2023-04-06 09:05:21 +0300
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 107)
+  Rendered layout layouts/application.html.erb (Duration: 10.4ms | Allocations: 2801)
+Completed 200 OK in 14ms (Views: 12.4ms | ActiveRecord: 0.0ms | Allocations: 3754)
+
+
